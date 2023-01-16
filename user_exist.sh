@@ -19,7 +19,7 @@ echo -e "$green\nCHECK WHETHER USER ALREADY EXIST$nocolor\n"
 read -p "Enter the user name: " user_name_check 
 
 getent passwd | grep -w $user_name_check &>/dev/null
-if [[ $? -eq 0 ]] ; then
+if [ $? -eq 0 ] ; then
     echo -e "${red}User already exists"
 else
     echo -e "${green}User do not exist"
